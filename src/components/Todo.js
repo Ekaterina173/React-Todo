@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 const StyledListItem = styled.li`
-  list-style-type: square;
+  list-style-type: disc;
 `;
 
 class Todo extends Component {
@@ -10,7 +10,9 @@ class Todo extends Component {
     console.log(this.props);
     return (
       <StyledListItem
-        onClick={() => this.props.toggleCompleted(this.props.id)}
+        onClick={() => {
+          this.props.toggleCompleted(this.props.id);
+        }}
         style={{
           textDecoration: this.props.completed ? "line-through" : "none",
         }}

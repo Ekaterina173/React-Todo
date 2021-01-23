@@ -14,7 +14,6 @@ class TodoForm extends Component {
     this.props.addTodo(this.state.inputVal);
     this.setState({ inputVal: "" });
   };
-
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
@@ -25,7 +24,7 @@ class TodoForm extends Component {
             placeholder="enter task"
             value={this.state.inputVal}
             onChange={(e) => this.setState({ inputVal: e.target.value })}
-          />
+          />{" "}
           <FormGroup>
             <Button type="submit" className="col-sm-6 " color="primary">
               Add ToDo
